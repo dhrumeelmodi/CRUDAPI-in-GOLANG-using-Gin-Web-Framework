@@ -5,8 +5,9 @@ import (
 
 	"gorm.io/gorm"
 )
+//ConnectionString of your Database
 
-const DNS = "sqlserver://developer:d123@90.0.0.110?database=BasicTraining"
+const DNS = "" 
 
 func Database() (*gorm.DB, error) {
 	db, err := gorm.Open(sqlserver.Open(DNS), &gorm.Config{})
