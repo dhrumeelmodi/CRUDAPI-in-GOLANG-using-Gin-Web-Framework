@@ -18,8 +18,8 @@ func main() {
 	r.GET("/getEmployees", employees.GetEmployees)
 	r.GET("/getEmployee/:id", employees.GetEmployeesByID)
 	r.POST("/insertEmployee", employees.CreateEmployee)
-	r.PUT("/updateEmployee", employees.UpdateEmployee)
-	r.DELETE("/deleteEmployees", employees.DeleteEmployee)
+	r.PUT("/updateEmployee/:id", employees.UpdateEmployee)
+	r.DELETE("/deleteEmployees/:id", employees.DeleteEmployee)
 
 	log.Fatal(r.Run(":8989"))
 }
